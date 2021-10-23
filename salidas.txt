@@ -1,0 +1,11 @@
+ingresa un numero entero el numero 1 : 1
+ingresa un numero entero el numero 2 : 2
+ingresa un numero entero el numero 3 : 3
+ingresa un numero entero el numero 4 : 4
+ingresa un numero entero el numero 5 : 5
+ingresa un numero entero el numero 6 : 6
+ingresa un numero entero el numero 7 : 7
+ingresa un numero entero el numero 8 : 8
+ingresa un numero entero el numero 9 : 9
+ingresa un numero entero el numero 10 : 0
+la suma es 45
