@@ -5,7 +5,7 @@ f.write(b"adriana maria arango mira")
 suma = 0
 col = eval(input("introduce el numero de la columna a extraer 1-3"))
 while 1 > col > 3:
-    col = eval(input("numero equivocado intorduce de nuevo el numero de columna"))
+    col = eval(input("numero equivocado intorduce de nuevo el numero de columna")) #asdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 num = eval(input("introduce el numero de registros a extrear"))
 for i in range(num):
     if i == 0:

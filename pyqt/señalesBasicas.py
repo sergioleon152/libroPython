@@ -7,7 +7,8 @@ import sys
 class VentanaPrincipal(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(VentanaPrincipal, self).__init__(*args, **kwargs)
-        # señal: la funcion connect se llamara siempre que la ventana titulo ha cambiado. el nuevo titulo se paasara a la funcion
+        # señal: la funcion connect se llamara siempre que la ventana titulo ha cambiado. el nuevo titulo se paasara
+        # a la funcion
         self.windowTitleChanged.connect(self.onWindowTitleChange)
         # señal: la funcion connect se llamara siempre que la ventana titulo ha cambiado. el nuevo titulo se descarta en el lambda y e se llama a la funcion sin parametros
         self.windowTitleChanged.connect(lambda x: self.my_custom_fn())
@@ -17,14 +18,15 @@ class VentanaPrincipal(QMainWindow):
         self.windowTitleChanged.connect(lambda x: self.my_custom_fn(x, 25))
 
         # esto establece el titulo de la ventana que activara todas las seañles anteriores enviando el nuevo titulo a las funciones adjuntas o lambdas como el primer parametro
-        self.setWindowTitle("mi increible aplicacion")
+        self.setWindowTitle("mi increible aplicacion") #adwssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
         etiqueta = QLabel("muy interesante")
         etiqueta.setAlignment(Qt.AlignCenter)
         self.setCentralWidget(etiqueta)
 
-# slot: acepta una cadena por ejemplo el titulo dela ventana y la imprime
+# slot: acepta una cadena por ejemplo el titulo dela ventana y la imprime este es el manejo de la señal que estamso
+    # creando es siempre necesario agregarla asi no hagamos uso de ella
     def onWindowTitleChange(self, s):
-        print(s)
+        None
 # slot: tiene parametros predeterminado y se puede llamar sin un valor
 
     def my_custom_fn(self, a="HELLLO!", b=5):

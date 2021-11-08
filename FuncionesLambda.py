@@ -11,7 +11,7 @@ print(
 # ahora con funciones lambda
 
 
-def area_triangulo(base, altura): return (base*altura)/2
+area_triangulo= lambda base, altura: (base*altura)/2
 
 
 print(area_triangulo(7, 5))
