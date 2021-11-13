@@ -11,12 +11,12 @@ print(
 # ahora con funciones lambda
 
 
-area_triangulo= lambda base, altura: (base*altura)/2
+area_triangulo=lambda base, altura:(base*altura)/2
 
 
 print(area_triangulo(7, 5))
 print(area_triangulo(9, 7))
-# o podemos guardarlos en aribles
+# o podemos guardarlos en las varibles
 triangulo1 = area_triangulo(2, 5)
 triangulo2 = area_triangulo(4, 8)
 print(triangulo2, triangulo1)

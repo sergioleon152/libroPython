@@ -25,8 +25,16 @@ class VentanaPrincipal(QMainWindow):
 
 # slot: acepta una cadena por ejemplo el titulo dela ventana y la imprime este es el manejo de la señal que estamso
     # creando es siempre necesario agregarla asi no hagamos uso de ella
-    def onWindowTitleChange(self, s):
-        None
+    
+    
+    #ahora aremos uso e los eventos aunque no es muy necesario cuando hacemos uso de las ranuras y señales pero la idea es entender mas o menos como funcionana cuando toque utilzarñps
+    def contextMenuEvent(self, event):
+        print("evento del menu contextual")
+        super(VentanaPrincipal, self).contextMenuEvent(event)
+        #para no propagar el evento podemos dare
+        #event.accept()
+        #y para propagarlo le damos 
+        #e.ignore()
 # slot: tiene parametros predeterminado y se puede llamar sin un valor
 
     def my_custom_fn(self, a="HELLLO!", b=5):
