@@ -21,7 +21,7 @@ class VentanaPrincipal(QMainWindow):
         self.windowTitleChanged.connect(lambda x: self.my_custom_fn())
         self.setWindowTitle("buena crack")
         #ahora vamos a crear un QAction qeu es como un boton que sirve para tener tanto comandos en la barra de herramientas como el menu ejemplo la opcion de cortar cuando damos cont+x o cuando le damos en el menu seria toda una misma gracias a este objeto para darle un icono se le pasa como primer argumento
-        botonAccion=QAction(QIcon(r"iconos/fugue-icons-3.5.6/icons-shadowless/edit.png"),"edit",self)
+        botonAccion=QAction(QIcon("../iconos/fugue-icons-3.5.6/icons/edit.png"),"edit",self)
         botonAccion.setStatusTip("este es el boton de editar")
         botonAccion.triggered.connect(self.onMyToolBarButtonClick)
         botonAccion.setCheckable(True)
@@ -35,10 +35,12 @@ class VentanaPrincipal(QMainWindow):
         #-------------------------------------------------------
         #ahora agregaremos un apr mas de botones y cosas locas osea widgets para y un separador
         herramientas.addSeparator()
-        botonAccion2=QAction(QIcon(r"iconos/fugue-icons-3.5.6/icons-shadowless/color.png"),"file",self)
+        botonAccion2=QAction(QIcon('../iconos/fugue-icons-3.5.6/icons/animal.png'),"file",self)
         botonAccion2.setStatusTip("boron de archivo")
         botonAccion2.triggered.connect(self.onMyToolBarButtonClick)
         botonAccion2.setCheckable(True)
+        #ahora vamos a agregarle un shurtcut al boton accion 2 de esta manera sera independiente del sistema o sea siempre se usara esta combinacion asi sea linux,mac,windows
+        botonAccion2.setShortcut(QKeySequence("ctrl+p"))
         herramientas.addAction(botonAccion2)
         #---------------------------------
         #agregando algunos widgts a la barra de herramientas
@@ -51,6 +53,15 @@ class VentanaPrincipal(QMainWindow):
         herramientas.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
 
         self.addToolBar(herramientas)
+
+        menu=self.menuBar()
+        file_menu = menu.addMenu("&file")
+        file_menu.addAction(botonAccion)
+        file_menu.addSeparator()
+        file_menu.addAction(botonAccion2)
+        file_submenu=file_menu.addMenu("SubMenu")
+        file_submenu.addAction(botonAccion2)
+        
 
 
     #y aca estamos usando el slot por defecto del click ara nuestro QACTIONBUTTON
